@@ -12,7 +12,7 @@ tags: [git, github, ssh, jekyll, github-pages, 환경변수, 학습기록]
 어제 하루 동안 GitHub에 SSH로 연결하고, 저장소를 가져오고, 이 블로그를 만들었다.
 중간에 오류도 여러 번 났는데 그 과정에서 배운 게 더 많았다.
 
-Git의 `add` / `commit` / `push` 기초는 [앞 글]({% post_url 2026-08-31-git-기초-add-commit-push %})에 따로 정리했다.
+Git의 `add` / `commit` / `push` 기초는 [앞 글]({% post_url 2026-08-31-git-basics-add-commit-push %})에 따로 정리했다.
 이 글은 그 외의 것들이다.
 
 ## Git은 이미 깔려 있었다

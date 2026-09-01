@@ -1,6 +1,6 @@
 ---
 title: "SSH 키부터 GitHub Pages 배포까지 - 블로그 만들며 배운 것들"
-date: 2026-09-01 09:30:00 +0900
+date: 2026-09-01 08:00:00 +0900
 categories: [Git, GitHub]
 tags: [git, github, ssh, jekyll, github-pages, 환경변수, 학습기록]
 ---

@@ -118,7 +118,9 @@ assets:
 pwa:
   enabled: true
   cache:
-    enabled: true
+    # 끔. 켜두면 서비스 워커가 캐시된 페이지만 보여주고 서버에 다시 묻지 않아서,
+    # 글을 고쳐도 재방문자에게 옛 내용이 계속 보인다. (2026-09-01)
+    enabled: false
     deny_paths:
 
 paginate: 10

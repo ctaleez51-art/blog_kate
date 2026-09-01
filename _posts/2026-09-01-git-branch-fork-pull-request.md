@@ -143,17 +143,3 @@ Fork  →  Clone  →  로컬 작업
 위 내용을 슬라이드 9장으로 정리한 교육자료다. Git·GitHub를 처음 배우는 사람에게 쓸 수 있게 만들었다.
 
 📎 [Git & GitHub 입문 (PPTX, 9장)]({{ site.baseurl }}/assets/files/git-github-intro.pptx)
-
-## 아직 안 해본 것
-
-개념은 정리했는데 **브랜치를 직접 만들어본 적은 아직 없다.**
-이 블로그 저장소도 확인해보니 `main` 하나뿐이다.
-
-```
-* main
-  remotes/origin/main
-```
-
-혼자 쓰는 저장소라 당장 나눌 일이 없어서인데,
-Fork와 Pull Request도 마찬가지로 아직 **읽어서 아는 것**에 머물러 있다.
-다음엔 직접 브랜치를 만들어 작업하고 병합하는 것까지 해봐야겠다.

@@ -5,6 +5,10 @@ categories: [Git, GitHub]
 tags: [git, github, ssh, jekyll, github-pages, 환경변수, 학습기록]
 ---
 
+> 모두의연구소 AI 에이전트 과정 학습 기록입니다.
+> Claude와의 대화 내용을 Claude가 초안으로 정리하고, 제가 검토·수정했습니다.
+{: .prompt-info }
+
 어제 하루 동안 GitHub에 SSH로 연결하고, 저장소를 가져오고, 이 블로그를 만들었다.
 중간에 오류도 여러 번 났는데 그 과정에서 배운 게 더 많았다.
 

@@ -9,11 +9,6 @@ on:
       - README.md
       - LICENSE
 
-  # 매일 09:00 KST(00:00 UTC)에 빌드를 한 번 돌린다.
-  # 미래 날짜로 적어둔 글이 이 빌드에서 발행된다.
-  schedule:
-    - cron: "0 0 * * *"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

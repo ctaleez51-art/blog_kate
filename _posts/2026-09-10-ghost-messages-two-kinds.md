@@ -54,7 +54,7 @@ Closing for now — inactive for too long
 이건 다르다. 화면에는 답변 한 덩어리 안에 섞여 나온다.
 쓰는 중에는 구분이 안 된다.
 
-![유령 메시지가 답변 안에 섞여 나온 화면]({{ site.baseurl }}/assets/files/ghost-message-example.png)
+![유령 메시지가 답변 안에 섞여 나온 화면](/assets/files/ghost-message-example.png)
 
 노란 형광펜을 그은 부분이 내가 쓰지 않은 문장이다.
 아래쪽에는 이런 내부 표시까지 따라 나왔다.

@@ -30,3 +30,6 @@ assets/js/dist
 *~
 .DS_Store
 Thumbs.db
+
+# 블로그 작업용 내부 문서 (공개하지 않음)
+BLOG-SKILL.md

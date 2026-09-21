@@ -292,3 +292,110 @@ git   2.55.0.windows.5
 
 - `git branch`, `git diff`, `.gitignore`
 - Jekyll 폴더 구조 하나씩 뜯어보기
+
+
+---
+
+## 덧붙임 — 만드는 순서만 따로 (2026-09-18)
+
+이 글에 "왜 그렇게 되는지"는 적었는데 **순서가 빠져 있었다.**
+나중에 다른 사람이 물어봐서 다시 정리한다. 전체 6단계, 30분쯤 걸린다.
+
+### 1. 남이 만들어둔 블로그를 복제한다
+
+뼈대를 직접 만들 수는 없다. 이미 만들어진 걸 가져다 쓴다.
+
+`github.com/cotes2020/chirpy-starter` 에서 **`Use this template` → `Create a new repository`**
+
+이름은 아무거나. 여기서는 `myblog` 라고 하자. **Public 으로 만든다** — Private이면 남이 못 본다.
+
+### 2. 내 컴퓨터로 가져온다
+
+글은 내 컴퓨터에서 쓰니까 파일이 있어야 한다.
+
+```powershell
+cd C:\Users\내계정\Desktop
+git clone https://github.com/내아이디/myblog.git
+cd myblog
+```
+
+### 3. 블로그 이름과 주소를 내 것으로 바꾼다
+
+지금은 만든 사람 설정이 들어 있다. `_config.yml` 에서 네 줄을 고친다.
+
+```yaml
+title: 내 블로그 이름
+tagline: 한 줄 소개
+url: "https://내아이디.github.io"
+baseurl: "/myblog"
+```
+
+`baseurl` 을 빠뜨리면 글자만 나오고 디자인이 다 깨진다. 저장소 이름 앞에 `/` 를 붙인다.
+
+### 4. 빌드 설정에 한 줄 넣는다
+
+이걸 안 하면 첫 배포가 반드시 실패한다.
+
+`.github/workflows/pages-deploy.yml` 의 `Setup Pages` 아래에 두 줄을 더한다.
+
+```yaml
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v6
+        with:
+          enablement: true
+```
+
+이유는 이 글 위쪽에 적었다. Pages가 기본으로 꺼져 있어서다.
+
+### 5. GitHub에서 Pages를 켠다
+
+저장소 → `Settings` → 왼쪽 `Pages` → `Source` 를 **`GitHub Actions`** 로.
+
+`Deploy from a branch` 아니다.
+
+### 6. 올린다
+
+```powershell
+git add .
+git commit -m "블로그 설정"
+git push
+```
+
+1분쯤 뒤 `https://내아이디.github.io/myblog/` 에 들어가면 블로그가 있다.
+
+### 글 쓰기
+
+`_posts` 폴더에 파일을 만들면 그게 글이다.
+
+```
+_posts/2026-09-18-my-first-post.md
+```
+
+날짜로 시작하고 **뒷부분은 영문**으로 짓는다. 한글이면 주소가 깨진다.
+
+내용은 이렇게 생겼다.
+
+```markdown
+---
+title: "첫 글"
+date: 2026-09-18 14:30:00 +0900
+categories: [일기]
+tags: [시작]
+---
+
+여기부터 본문. 그냥 Markdown이다.
+```
+
+맨 위 `---` 사이가 설정이고 그 아래가 본문이다.
+`date` 는 **지금 시각**으로 적는다. 미래로 적으면 글이 안 보이는데 오류도 안 뜬다.
+
+그다음 `git add .` → `commit` → `push` 하면 1분 뒤에 올라간다.
+
+### 안 될 때
+
+- **글이 안 보인다** — `date` 가 미래 시각인지 본다. 이게 제일 흔하다
+- **디자인이 깨졌다** — `_config.yml` 의 `baseurl` 을 본다
+- **빨간 X가 떴다** — `Actions` 탭에서 맨 위 줄을 누르면 어디서 멈췄는지 나온다.
+  `Setup Pages` 에서 멈췄으면 4번이나 5번을 빠뜨린 것이다
+- **나만 보이고 남에게는 404** — 저장소가 Private이다. `Settings` 맨 아래에서 Public으로 바꾼다

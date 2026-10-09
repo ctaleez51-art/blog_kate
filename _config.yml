@@ -12,7 +12,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Kate의 학습 기록 # 블로그 제목
+title: aKately # 블로그 제목
 
 tagline: AI를 공부하며 배운 것을 기록합니다 # 부제
 
@@ -77,7 +77,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # 사이드바 프로필 사진 (assets 폴더에 이미지를 넣고 경로를 적으면 표시됨)
-avatar:
+avatar: /assets/img/avatar.png
 
 # SEO og:image 에 쓰이는 대표 이미지
 social_preview_image:

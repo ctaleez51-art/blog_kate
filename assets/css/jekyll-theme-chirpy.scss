@@ -1,0 +1,145 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* 옆 메뉴: 연두 배경, 진한 갈색 글씨 */
+#sidebar {
+  background: #c5e384 !important;
+}
+
+#sidebar,
+#sidebar *,
+#sidebar a,
+#sidebar i {
+  color: #4a2c17 !important;
+}
+
+/* 옆 메뉴: 선택된 칸과 마우스 올린 칸 */
+#sidebar .nav-item.active .nav-link {
+  background: #9cc94f !important;
+  font-weight: 700;
+}
+
+#sidebar .nav-item:not(.active) .nav-link:hover {
+  background: #b3d96e !important;
+}
+
+/* 본문 제목과 링크: 다크 그린 */
+:root,
+html[data-mode] {
+  --heading-color: #1e5631 !important;
+  --link-color: #1e5631 !important;
+}
+
+#core-wrapper h1,
+#core-wrapper h2,
+#core-wrapper h3,
+.card-title {
+  color: #1e5631 !important;
+}
+
+#core-wrapper a {
+  color: #1e5631 !important;
+}
+
+/* 오른쪽 칸 소제목 */
+#panel-wrapper .panel-heading {
+  color: #4a2c17 !important;
+  border-bottom: 2px solid #9cc94f;
+  padding-bottom: 0.3rem;
+}
+
+/* 태그 단추 */
+#panel-wrapper .post-tag {
+  color: #1e5631 !important;
+  border-color: #9cc94f !important;
+  background: #f1f8e4 !important;
+}
+
+#panel-wrapper .post-tag:hover {
+  background: #9cc94f !important;
+  color: #4a2c17 !important;
+}
+
+/* 글 목록 상자 왼쪽 막대 */
+#post-list .card {
+  border-left: 4px solid #9cc94f !important;
+  transition: border-color 0.2s;
+}
+
+#post-list .card:hover {
+  border-left-color: #1e5631 !important;
+}
+
+/* 날짜와 분류 아이콘 */
+.post-meta i {
+  color: #8b5a2b !important;
+}
+
+/* 어두운 화면: 짙은 녹색 옆 메뉴, 밝은 베이지 글씨, 밝은 연두 제목과 링크 */
+html[data-bs-theme='dark'] {
+  --heading-color: #a8d672 !important;
+  --link-color: #a8d672 !important;
+
+  #sidebar {
+    background: #2e3b1f !important;
+  }
+
+  #sidebar,
+  #sidebar *,
+  #sidebar a,
+  #sidebar i {
+    color: #e8d9b5 !important;
+  }
+
+  #sidebar .nav-item.active .nav-link {
+    background: #4a6b2a !important;
+  }
+
+  #sidebar .nav-item:not(.active) .nav-link:hover {
+    background: #3d5524 !important;
+  }
+
+  #core-wrapper h1,
+  #core-wrapper h2,
+  #core-wrapper h3,
+  .card-title,
+  #core-wrapper a {
+    color: #a8d672 !important;
+  }
+
+  #panel-wrapper .panel-heading {
+    color: #e8d9b5 !important;
+    border-bottom-color: #6b9a3a;
+  }
+
+  #panel-wrapper .post-tag {
+    color: #a8d672 !important;
+    border-color: #6b9a3a !important;
+    background: #26301a !important;
+  }
+
+  #panel-wrapper .post-tag:hover {
+    background: #4a6b2a !important;
+    color: #e8d9b5 !important;
+  }
+
+  #post-list .card {
+    border-left-color: #6b9a3a !important;
+  }
+
+  #post-list .card:hover {
+    border-left-color: #a8d672 !important;
+  }
+
+  .post-meta i {
+    color: #c9a27a !important;
+  }
+}

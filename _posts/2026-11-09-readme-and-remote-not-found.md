@@ -58,7 +58,7 @@ remote: Repository not found.
 `아이디` 라는 계정의 저장소를 찾았으니 없는 게 당연하다. 내 다른 저장소들은 SSH 주소(`git@github.com:계정/저장소.git`)를 쓰고 있어서, 같은 방식으로 주소를 바꿨다.
 
 ```
-git -C C:\Users\ctale\Desktop\claudecode\tax-routing-agent remote set-url origin git@github.com:ctaleez51-art/tax-routing-agent.git
+git -C <과제 폴더 경로> remote set-url origin git@github.com:ctaleez51-art/tax-routing-agent.git
 ```
 
 ## 올라갔는지 확인
